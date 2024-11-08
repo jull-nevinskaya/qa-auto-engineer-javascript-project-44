@@ -1,1 +1,4 @@
-console.log("Welcome to the Brain Games!")
+import {helloFunc} from '../src/cli.js';
+
+helloFunc();
+
