@@ -1,4 +1,3 @@
-import {helloFunc} from '../src/cli.js';
+import { helloFunc } from '../src/cli';
 
 helloFunc();
-
