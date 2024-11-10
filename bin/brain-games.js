@@ -1,3 +1,3 @@
-import { checkEven } from '../src/index.js';
+import { checkEven } from '../src/isEven.js';
 
 checkEven();

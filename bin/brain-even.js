@@ -1,3 +1,6 @@
-import { checkEven } from '../src/index';
+import { func, greetings, random } from '../src/index.js'
+import { isEven } from "../src/games/isEven.js";
 
-checkEven();
+const name = greetings('Answer "yes" if the number is even, otherwise answer "no".');
+
+func(random, isEven, name);
