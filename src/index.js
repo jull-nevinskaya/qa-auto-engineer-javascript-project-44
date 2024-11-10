@@ -38,5 +38,3 @@ export const checkEven = () => {
     console.log(`Congratulations, ${name}!`);
   }
 };
-
-checkEven();

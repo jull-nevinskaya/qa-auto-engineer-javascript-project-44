@@ -1,3 +1,3 @@
-import { helloFunc } from '../src/cli';
+import { checkEven } from '../src/index.js';
 
-helloFunc();
+checkEven();
