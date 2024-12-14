@@ -34,4 +34,4 @@ export const game = (func, name) => {
   if (count === 3) {
     console.log(`Congratulations, ${name}!`);
   }
-}
+};
