@@ -3,10 +3,10 @@ import { game } from '../src/index.js';
 // eslint-disable-next-line import/extensions
 import { helloFunc } from '../src/cli.js';
 // eslint-disable-next-line import/extensions
-import { expression } from '../src/games/calc.js';
+import { smallestDivisor } from '../src/games/gcd.js';
 
 const name = helloFunc();
 
-console.log('What is the result of the expression?');
+console.log('Find the greatest common divisor of given numbers.');
 
-game(expression, name);
+game(smallestDivisor, name);

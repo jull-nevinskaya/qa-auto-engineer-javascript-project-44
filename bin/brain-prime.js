@@ -3,10 +3,10 @@ import { game } from '../src/index.js';
 // eslint-disable-next-line import/extensions
 import { helloFunc } from '../src/cli.js';
 // eslint-disable-next-line import/extensions
-import { expression } from '../src/games/calc.js';
+import { prime } from '../src/games/prime.js';
 
 const name = helloFunc();
 
-console.log('What is the result of the expression?');
+console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
 
-game(expression, name);
+game(prime, name);
