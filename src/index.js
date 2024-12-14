@@ -7,7 +7,7 @@ export const getRandomNumber10 = () => (Math.floor(Math.random() * 10) + 1);
 export const isEven = (num) => (num % 2 === 0 ? 'yes' : 'no');
 
 export const question = (expression, result, name) => {
-  console.log('Question: ', expression);
+  console.log('Question:', expression);
   const answer = readlineSync.question();
   console.log(`Your answer: ${answer}`);
   if (answer === result.toString()) {
