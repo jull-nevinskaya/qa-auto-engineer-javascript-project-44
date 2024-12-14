@@ -9,7 +9,7 @@ export const generateProgression = (num1, num2) => {
     arrProgression.push(arrProgression[i - 1] + step);
   }
   return arrProgression;
-}
+};
 
 export const finalProgression = () => {
   const num1 = getRandomNumber10();
@@ -19,7 +19,8 @@ export const finalProgression = () => {
   const answer = progression[numOfdot - 1];
   progression[numOfdot - 1] = '..';
   const resArr = [];
-  resArr.push(progression);
+  const str = progression.join(' ');
+  resArr.push(str);
   resArr.push(answer);
   return resArr;
-}
+};
