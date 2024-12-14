@@ -3,10 +3,10 @@ import { game } from '../src/index.js';
 // eslint-disable-next-line import/extensions
 import { helloFunc } from '../src/cli.js';
 // eslint-disable-next-line import/extensions
-import { expression } from '../src/games/calc.js';
+import { finalProgression } from '../src/games/progression.js';
 
 const name = helloFunc();
 
-console.log('What is the result of the expression?');
+console.log('What number is missing in the progression?');
 
-game(expression, name);
+game(finalProgression, name);

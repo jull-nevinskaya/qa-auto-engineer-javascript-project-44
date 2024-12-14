@@ -1,42 +1,37 @@
-import readlineSync from "readline-sync";
-
+import readlineSync from 'readline-sync';
 
 export const random = () => Math.round(Math.random() * 100);
 
-export const greetings = (question) => {
-  console.log('Welcome to the Brain Games!');
-  console.log('May I have your name?');
-  const name = readlineSync.question();
-  console.log(`Hello, ${name}!`);
-  console.log(question);
-  return name;
-};
+export const getRandomNumber10 = () => (Math.floor(Math.random() * 10) + 1);
+
+export const isEven = (num) => (num % 2 === 0 ? 'yes' : 'no');
 
 export const question = (expression, result, name) => {
-  let exp = expression();
-  console.log('Question: ', exp);
+  console.log('Question: ', expression);
   const answer = readlineSync.question();
   console.log(`Your answer: ${answer}`);
-  if (Number(answer) === result(exp)) {
+  if (answer === result.toString()) {
     console.log('Correct!');
     return true;
   }
-
-  console.log(`'${answer}' is wrong answer ;(. Correct answer was '${result(exp)}'`);
+  console.log(`'${answer}' is wrong answer ;(. Correct answer was '${result}'`);
   console.log(`Let's try again, ${name}!`);
   return false;
 };
 
-export const func = (generation, check, name) => {
-  let i = 0;
-  let res = true;
+export const game = (func, name) => {
+  let count = 0;
 
-  res = question(generation, check, name);
-  while (res === true && (i < 2)) {
-    res = question(generation, check);
-    i = i + 1;
+  while (count < 3) {
+    const result = func();
+    if (question(result[0], result[1], name)) {
+      count += 1;
+    } else {
+      break;
+    }
   }
-  if (res === true) {
+
+  if (count === 3) {
     console.log(`Congratulations, ${name}!`);
   }
 }
